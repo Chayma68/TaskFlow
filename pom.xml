@@ -12,6 +12,7 @@
         <module>core</module>
         <module>infrastructure</module>
         <module>api</module>
+        <module>infrastructure</module>
     </modules>
 
     <dependencyManagement>
