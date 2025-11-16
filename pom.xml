@@ -12,23 +12,57 @@
         <module>core</module>
         <module>infrastructure</module>
         <module>api</module>
-        <module>infrastructure</module>
     </modules>
 
+    <!-- ✅ Propriétés communes à tous les modules -->
+    <properties>
+        <!-- Version Java utilisée pour la compilation -->
+        <java.version>17</java.version>
+
+        <!-- Encodage -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- Versions libs -->
+        <spring.boot.version>3.3.5</spring.boot.version>
+        <mapstruct.version>1.6.3</mapstruct.version>
+        <mysql.version>8.4.0</mysql.version>
+    </properties>
+
+    <!-- ✅ BOM Spring Boot pour gérer les versions de dépendances Spring -->
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>3.4.11</version>
+                <version>${spring.boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
 
-    <properties>
-        <java.version>17</java.version>
-        <mapstruct.version>1.6.3</mapstruct.version>
-    </properties>
+    <!-- ✅ Plugins communs à tous les modules -->
+    <build>
+        <pluginManagement>
+            <plugins>
+                <!-- Compiler : Java 17, évite les warnings sur source/target 8 -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.13.0</version>
+                    <configuration>
+                        <release>${java.version}</release>
+                        <encoding>${project.build.sourceEncoding}</encoding>
+                    </configuration>
+                </plugin>
+
+                <!-- Spring Boot plugin, version centralisée ici -->
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring.boot.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>

@@ -13,22 +13,28 @@
 	<artifactId>api</artifactId>
 
 	<dependencies>
+		<!-- Spring Boot Web -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<version>3.3.5</version>
 		</dependency>
 
+		<!-- Actuator (même version que spring-boot-starter-web) -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
+			<version>3.3.5</version>
 		</dependency>
 
+		<!-- OpenAPI / Swagger UI -->
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
 			<version>2.6.0</version>
 		</dependency>
 
+		<!-- Module infrastructure de ton projet -->
 		<dependency>
 			<groupId>com.taskflow</groupId>
 			<artifactId>infrastructure</artifactId>
@@ -41,6 +47,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>3.3.5</version>
 			</plugin>
 		</plugins>
 	</build>
