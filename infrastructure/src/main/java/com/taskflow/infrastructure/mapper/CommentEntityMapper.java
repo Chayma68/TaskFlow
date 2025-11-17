@@ -1,8 +1,9 @@
 package com.taskflow.infrastructure.mapper;
 
-import com.taskflow.core.domain.Comment;
+import com.taskflow.*;
 import com.taskflow.infrastructure.entity.CommentEntity;
-import org.mapstruct.Mapper;
+import com.taskflow.model.Comment;
+
 
 @Mapper(componentModel = "spring")
 public interface CommentEntityMapper {
