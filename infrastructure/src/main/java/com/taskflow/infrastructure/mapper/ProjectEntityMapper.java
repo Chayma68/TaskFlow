@@ -1,6 +1,6 @@
 package com.taskflow.infrastructure.mapper;
 
-import com.taskflow.core.domain.Project;
+import com.taskflow.model.Project;           // DOMAIN MODEL ✔
 import com.taskflow.infrastructure.entity.ProjectEntity;
 import org.mapstruct.Mapper;
 

@@ -1,7 +1,6 @@
 package com.taskflow.infrastructure.mapper;
-
-import com.taskflow.core.domain.Task;
 import com.taskflow.infrastructure.entity.TaskEntity;
+import com.taskflow.model.Task;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
