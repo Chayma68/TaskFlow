@@ -48,4 +48,13 @@ public class CommentRepositoryAdapter implements CommentRepositoryPort {
     public void deleteById(Long id) {
         commentRepository.deleteById(id);
     }
+
+    @Override
+    public List<Comment> findAll() {
+        return commentRepository.findAll()
+                .stream()
+                .map(commentEntityMapper::toDomain)
+                .collect(Collectors.toList());
+    }
+
 }

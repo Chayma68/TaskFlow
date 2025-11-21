@@ -14,4 +14,6 @@ public interface CommentRepositoryPort {
     List<Comment> findByTaskId(Long taskId);
 
     void deleteById(Long id);
+
+    List<Comment> findAll();
 }
