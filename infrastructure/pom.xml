@@ -17,7 +17,7 @@
         <dependency>
             <groupId>com.taskflow</groupId>
             <artifactId>core</artifactId>
-            <version>1.0.0</version>
+
         </dependency>
 
         <!-- JPA + Hibernate -->
@@ -55,12 +55,6 @@
             <artifactId>mapstruct</artifactId>
             <version>1.6.3</version>
         </dependency>
-        <dependency>
-            <groupId>com.taskflow</groupId>
-            <artifactId>core</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
 
     </dependencies>
 </project>
