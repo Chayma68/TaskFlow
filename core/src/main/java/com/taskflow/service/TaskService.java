@@ -1,6 +1,7 @@
 package com.taskflow.service;
 
 import com.taskflow.model.Task;
+import com.taskflow.model.TaskStatus;
 import com.taskflow.model.port.TaskRepositoryPort;
 
 import java.util.List;
@@ -15,6 +16,10 @@ public class TaskService {
     }
 
     public Task createTask(Task task) {
+
+        // 🔹 Règle métier 2 : au moment de la création, statut TODO par défaut
+        task.setStatus(TaskStatus.TODO);
+
         return taskRepositoryPort.save(task);
     }
 

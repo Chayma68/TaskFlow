@@ -1,5 +1,7 @@
 package com.taskflow.infrastructure.entity;
 
+import com.taskflow.infrastructure.entity.TaskEntity;
+import com.taskflow.infrastructure.entity.UserEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
